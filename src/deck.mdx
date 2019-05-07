@@ -1,0 +1,65 @@
+
+# This is the title of my deck
+This is MDX Deck
+
+---
+
+# About Me
+Static
+Multithread
+Idempotente (static, Multithread, pure function, Static consume less memory and therefore perform better than traditional data structures. isolating them from the rest of the software code)
+Expressividade (melhor nomenclatura [filter, map, find, reduce])
+Imutabilidade (single responsibility, Avoiding shared states(OOP) ensures that the timing and order of function calls do not impact the results of calculations.)
+Variables That Don’t Vary
+Functional programming doesn’t use loop constructs such as repeat, for and while. Instead, it relies on recursion for looping.
+
+CURRYING (the process of taking a function with multiple arguments and returning a series of functions that take one argument and eventually resolve to a value.)
+CLOSURE (the combination of a function and the lexical environment within which that function was declared.)
+HIGHER-ORDER FUNCTION (Functions that operate on other functions, either by taking them as arguments or by returning them.)
+PURE FUNCTIONS (Given the same input, will always return the same output and produces no side effects.)
+Of course, there’s only so much you can do with pure functions, and functional languages can’t entirely eliminate side effects; they just confine them. Parts of your code have to be impure, but the goal of functional programming is to limit impure code and keep it separate from everything else.
+Imperative code makes frequent use of statements like for, if and switch. Declarative code, on the other hand, relies more heavily on expressions
+
+
+Monads (wrap types giving them additional behavior like the automatic propagation of empty value or simplifying asynchronous code.)
+Functor (A Functor is a container which can be mapped upon by a Unary function.)
+
+
+Why?
+When? Lisp, developed in the late 1950s by John McCarthy
+
+
+https://github.com/MostlyAdequate/mostly-adequate-guide
+https://github.com/getify/You-Dont-Know-JS
+https://github.com/getify/Functional-Light-JS
+
+
+https://www.keycdn.com/blog/functional-programming
+
+---
+
+```jsx
+<CodeSnippet />
+```
+
+---
+
+import { CodeSurfer } from "mdx-deck-code-surfer"
+
+<CodeSurfer
+    code={require("!raw-loader!./my-snippet.js")}
+    steps={[
+        { notes: "Start with this note" },
+        { lines: [6], notes: "Note for the first step" }
+    ]}
+/>
+
+---
+
+import Page2 from './components/Page2'
+
+## <Page2 />
+
+---
+
+# The end
