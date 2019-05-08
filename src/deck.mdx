@@ -1,5 +1,6 @@
 import { CodeSurfer } from 'mdx-deck-code-surfer'
 import { code } from 'mdx-deck/themes'
+import { Appear } from 'mdx-deck'
 import vsDark from "prism-react-renderer/themes/vsDark"
 import Image from './components/Image'
 
@@ -11,55 +12,176 @@ export const theme = {
   }
 }
 
+
 # Functional Programming
 Leco & Xandinho
 
 ---
 
 # When?
-Lisp, developed in the late 1950s by John McCarthy
+<Appear>    
+  <p>Lisp</p>
+  <p>Late 1950s by John McCarthy</p>
+</Appear>    
 
 ---
 
-## <img src='./assets/tell_me_why.jpg' style={{ width: '12vw' }} />
+## <Image src='./assets/tell_me_why.jpg' width='50vw' />
 
 ---
 
-# Closure
+# Idempotence
+#### Can be applied multiple times without changing the result.
+
+<Appear>
+  <p>Async</p>
+  <p>Static Methods</p>
+</Appear>
+
+---
+
+# Immutability
+#### Object whose state cannot be modified after it is created.
+##### Variables That Don’t Vary
+
+<Appear>
+  <p>Single Responsability</p>
+  <p>Timing and order of function calls do not impact the result</p>  
+  <p>Async</p>
+</Appear>
+
+---
+
+# Expressiveness
+#### Easy to understand, both for the compiler and for a human reader.
+
+<Appear>
+  <p>Single Responsability</p>
+</Appear>
+
+---
+
+# Expressions
+#### Pieces of code that evaluate and return a value.
+
+<Appear>
+  <p>Recursiveness</p>
+  <p>Expressiveness</p>
+</Appear>
+
+---
+
+# High Order Function
+#### Functions that operate on other functions, either by taking them as arguments or by returning them.
 
 ---
 
 <CodeSurfer
-    code={require("!raw-loader!./closure.js")}
+    code={require("!raw-loader!./highorderfunction.js")}
     steps={[
-        { notes: "Closure example in JS"},
+        { notes: 'JS High Order Function' },
         { lines: [1] },
-        { lines: [2], },
-        { lines: [3] },
-        { range: [1, 5] },
-        { lines: [7], },
-        { lines: [8], },
-        { range: [10, 11] }
+        { lines: [2] },
+        { lines: [5] },
+        { lines: [7] },
+        { lines: [10] }
     ]}
 />
 
 ---
 
-## <img src='./assets/thales_positivo.jpg' style={{ width: '12vw' }} />
+<CodeSurfer
+    code={require("!raw-loader!./highorderfunctionloop.js")}
+    steps={[
+        { notes: 'Loop com for' }
+    ]}
+/>
+
+---
+
+## <Image src='./assets/thales_positivo.jpg' width='12vw' />
 
 ## "Eu achei esse aqui mais fácil de ler."
 ### -Thales
 
 ---
 
+# Pure Function
+#### Given the same input, will always return the same output and produces no side effects.
+
+<Appear>    
+  <p>Idempotence</p>
+  <p>Immutability</p>
+</Appear>
+
+---
+
+<CodeSurfer
+    code={require("!raw-loader!./impurefunction.js")}
+    steps={[
+        { notes: 'JS Impure Function' },
+        { range: [2, 5], notes: 'Altera o objeto \'cart\'' },
+        { lines: [7] }
+    ]}
+/>
+
+---
+
+<CodeSurfer
+    code={require("!raw-loader!./purefunction.js")}
+    steps={[
+        { notes: 'JS pure Function' },                
+        { lines: [2], notes: 'Criar um clone novo' },
+        { range: [4, 7], notes: 'Altera o novo objeto' },
+        { lines: [9] }
+    ]}
+/>
+
+---
+
+# !DISCLAIMER!
+
+<Appear>    
+  <p>Parts of your code need to be impure</p>
+  <p>Limit and keep it separate from all the rest</p>
+</Appear>
+
+---
+
+# Closure
+#### The combination of a function and the lexical environment within which that function was declared.
+
+---
+
+<CodeSurfer
+    code={require("!raw-loader!./closure.js")}
+    steps={[
+        { notes: 'JS Closure' },
+        { lines: [1] },
+        { lines: [2] },
+        { lines: [3] },
+        { range: [1, 5] },
+        { lines: [7] },
+        { lines: [8] },
+        { range: [10, 11] }
+    ]}
+/>
+
+---
+
 # Currying
+#### The process of taking a function with multiple arguments and returning a series of functions that take one argument and eventually resolve to a value.
+
+<Appear>    
+  <p>Chained Closure</p>
+</Appear>
 
 ---
 
 <CodeSurfer
     code={require("!raw-loader!./currying.js")}
     steps={[
-        { notes: "Currying example in JS"},
+        { notes: 'JS Currying' },
         { lines: [1] },
         { lines: [2] },
         { lines: [3] },
@@ -71,4 +193,24 @@ Lisp, developed in the late 1950s by John McCarthy
 
 ---
 
-# The end
+# Monad
+#### Wrap types giving them additional behavior like the automatic propagation of empty value or simplifying asynchronous code.
+
+---
+
+# Functor
+#### A container which can be mapped upon by a Unary function.
+
+---
+
+# Questions?
+
+---
+
+# Reading
+
+<ul>
+  <li style={{'text-align': 'left'}}>https://github.com/MostlyAdequate/mostly-adequate-guide</li>
+  <li style={{'text-align': 'left'}}>https://github.com/getify/You-Dont-Know-JS</li>
+  <li style={{'text-align': 'left'}}>https://github.com/getify/Functional-Light-JS</li>
+</ul>

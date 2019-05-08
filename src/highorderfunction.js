@@ -1,13 +1,13 @@
-function repeat(n, action) {
-  if (n === 0)
+function repeat(n, action, i = 0) {
+  if (i === n)
     return;
 
-  action(n);
+  action(i);
 
-  repeat(n - 1, action);
+  repeat(n, action, ++i);
 }
 
 repeat(3, console.log);
-// 3
-// 2
+// 0
 // 1
+// 2
