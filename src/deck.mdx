@@ -106,6 +106,20 @@ Leco & Xandinho
 
 ---
 
+<CodeSurfer
+    code={require("!raw-loader!./highorderfunction.cs")}
+    steps={[
+        { notes: 'C# High Order Function' },
+        { lines: [1] },
+        { lines: [3] },
+        { lines: [6] },
+        { lines: [8] },
+        { lines: [13] }
+    ]}
+/>
+
+---
+
 # Pure Function
 #### Given the same input, will always return the same output and produces no side effects.
 
@@ -133,6 +147,18 @@ Leco & Xandinho
         { notes: 'JS pure Function' },                
         { lines: [2], notes: 'Criar um clone novo' },
         { range: [4, 7], notes: 'Altera o novo objeto' },
+        { lines: [9] }
+    ]}
+/>
+
+---
+
+<CodeSurfer
+    code={require("!raw-loader!./purefunction.cs")}
+    steps={[
+        { notes: 'C# pure Function' },                
+        { lines: [3], notes: 'Criar um clone novo' },
+        { range: [5, 7], notes: 'Altera o novo objeto' },
         { lines: [9] }
     ]}
 />
@@ -169,6 +195,21 @@ Leco & Xandinho
 
 ---
 
+<CodeSurfer
+    code={require("!raw-loader!./closure.cs")}
+    steps={[
+        { notes: 'C# Closure' },
+        { lines: [1] },
+        { lines: [3] },
+        { range: [1, 6] },
+        { lines: [10] },
+        { lines: [11] },
+        { range: [13, 14] }
+    ]}
+/>
+
+---
+
 # Currying
 #### The process of taking a function with multiple arguments and returning a series of functions that take one argument and eventually resolve to a value.
 
@@ -188,6 +229,21 @@ Leco & Xandinho
         { lines: [4] },
         { range: [1, 7] },
         { lines: [9] }
+    ]}
+/>
+
+---
+
+<CodeSurfer
+    code={require("!raw-loader!./currying.cs")}
+    steps={[
+        { notes: 'C# Currying' },
+        { lines: [1] },
+        { lines: [3] },
+        { lines: [4] },
+        { range: [3, 7] },
+        { range: [1, 10] },
+        { lines: [14] }
     ]}
 />
 
