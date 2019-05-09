@@ -71,6 +71,13 @@ Leco & Xandinho
 
 ---
 
+## <Image src='./assets/lincon.png' width='12vw' />
+
+## "Talk is cheap. Show me the code."
+### -Bob Marley
+
+---
+
 # High Order Function
 #### Functions that operate on other functions, either by taking them as arguments or by returning them.
 
@@ -84,7 +91,8 @@ Leco & Xandinho
         { lines: [2] },
         { lines: [5] },
         { lines: [7] },
-        { lines: [10] }
+        { lines: [10] },
+        { }
     ]}
 />
 
@@ -134,7 +142,7 @@ Leco & Xandinho
     code={require("!raw-loader!./impurefunction.js")}
     steps={[
         { notes: 'JS Impure Function' },
-        { range: [2, 5], notes: 'Altera o objeto \'cart\'' },
+        { range: [2, 5], notes: 'Alter the object \'cart\'' },
         { lines: [7] }
     ]}
 />
@@ -145,8 +153,8 @@ Leco & Xandinho
     code={require("!raw-loader!./purefunction.js")}
     steps={[
         { notes: 'JS pure Function' },                
-        { lines: [2], notes: 'Criar um clone novo' },
-        { range: [4, 7], notes: 'Altera o novo objeto' },
+        { lines: [2], notes: 'Create a deep clone of the object' },
+        { range: [4, 7], notes: 'Alter the new one' },
         { lines: [9] }
     ]}
 />
@@ -157,15 +165,17 @@ Leco & Xandinho
     code={require("!raw-loader!./purefunction.cs")}
     steps={[
         { notes: 'C# pure Function' },                
-        { lines: [3], notes: 'Criar um clone novo' },
-        { range: [5, 7], notes: 'Altera o novo objeto' },
+        { lines: [3], notes: 'Create a deep clone of the object' },
+        { range: [5, 7], notes: 'Alter the new one' },
         { lines: [9] }
     ]}
 />
 
 ---
 
-# !DISCLAIMER!
+<div>
+  <h1 style={{color: 'red'}}>!DISCLAIMER!</h1>
+</div>
 
 <Appear>    
   <p>Parts of your code need to be impure</p>
@@ -252,12 +262,38 @@ Leco & Xandinho
 # Monad
 #### Wrap types giving them additional behavior like the automatic propagation of empty value or simplifying asynchronous code.
 
+<Appear>    
+  <p>Maybe</p>
+  <p>Either</p>
+  <p>List</p>
+</Appear>
+
+---
+
+<CodeSurfer
+    code={require("!raw-loader!./monad.cs")}
+    steps={[
+        { notes: 'C# Maybe Monad' },
+        { lines: [3] },
+        { lines: [5] },
+        { range: [7, 16] },
+        { range: [18, 21] }
+    ]}
+/>
+
 ---
 
 # Functor
 #### A container which can be mapped upon by a Unary function.
 
+<Appear>    
+  <p>All Lists</p>
+  <p>Functions (Closure)</p>
+</Appear>
+
 ---
+
+## <Image src='./assets/question.png' width='20vw' />
 
 # Questions?
 
@@ -270,3 +306,7 @@ Leco & Xandinho
   <li style={{'text-align': 'left'}}>https://github.com/getify/You-Dont-Know-JS</li>
   <li style={{'text-align': 'left'}}>https://github.com/getify/Functional-Light-JS</li>
 </ul>
+
+---
+
+## <Image src='./assets/byebyebye.gif' width='50vw' />
